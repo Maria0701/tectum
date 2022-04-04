@@ -1,0 +1,138 @@
+<header class="header">
+    <div class="header__container container-xxl d-flex align-items-center ">
+        <a class="header__logo log" href="/" title="Logo"><img src="img/logo.svg" alt="logo" class="logo__img"></a>
+        <button class="light-switcher header__btn d-flex justify-content-center align-items-center" onclick="this.classList.toggle('day')">
+            <span class="light-switcher__icon light-switcher__icon--day">
+                <svg width="16" height="16">
+                    <use xlink:href="img/sprite.svg#icon-light"></use>
+                </svg>  
+            </span>
+            <span class="light-switcher__icon light-switcher__icon--night">
+                <svg width="16" height="16">
+                    <use xlink:href="img/sprite.svg#icon-night"></use>
+                </svg>  
+            </span>
+        </button>
+        <a class="header__bell d-none d-lg-flex justify-content-center align-items-center" href="#" title="fgkiejg" >
+            <svg width="15.18" height="19.15">
+                <use xlink:href="img/sprite.svg#icon-bell"></use>
+            </svg>
+        </a>
+        <button class="header__opener d-block d-lg-none" >
+            <span><span></span></span>
+        </button>
+        <div class="header__menu-wrapper">        
+            <div class="header__switchers d-flex d-lg-none d-xl-flex align-items-center">
+                <div class="header__sel-wrapper header__sel-wrapper--curr">
+                    <div class="sel sel__label--currency" data-select="select">
+                        <label class="sel__label">
+                            <input class="sel__input sel__input--dark" value="10" data-set="select-target"> 
+                            <span class="sel__select-svg">
+                                <svg width="6" height="12">
+                                    <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                                </svg>
+                            </span>
+                        </label>
+                        <div class="sel__wrapper  sel__wrapper--dark">
+                            <label class="sel__option">
+                                <input type="checkbox" checked="" value="USD"><span>USD</span>
+                            </label>
+                            <label class="sel__option">
+                                <input type="checkbox" value="MOZ"><span>MOZ</span>
+                            </label>
+                            <label class="sel__option">
+                                <input type="checkbox" value="TEC"><span>TEC</span>
+                            </label>
+                            <label class="sel__option">
+                                <input type="checkbox" value="BTC"><span>BTC</span>
+                            </label>
+                            <label class="sel__option">
+                                <input type="checkbox" value="ETH"><span>ETH</span>
+                            </label>
+                            <label class="sel__option">
+                                <input type="checkbox" value="USD"><span>USD</span>
+                            </label>
+                            <label class="sel__option">
+                                <input type="checkbox" value="EUR"><span>EUR</span>
+                            </label>
+                            <label class="sel__option">
+                                <input type="checkbox" value="GBP"><span>GBP</span>
+                            </label>
+                            <label class="sel__option">
+                                <input type="checkbox" value="CAD"><span>CAD</span>
+                            </label>
+                            <label class="sel__option">
+                                <input type="checkbox" value="AUD"><span>AUD</span>
+                            </label>
+                            <label class="sel__option">
+                                <input type="checkbox" value="GBP"><span>RUB</span>
+                            </label>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="header__sel-wrapper header__sel-wrapper--lang">                    
+                    <div class="sel sel__label--lang" data-select="select">
+                        <span class="sel__select-planet">                    
+                            <svg width="16" height="15">
+                                <use xlink:href="img/sprite.svg#icon-planet2"></use>
+                            </svg>                    
+                        </span>
+                        <label class="sel__label">
+                            <input class="sel__input sel__input--dark" value="10" data-set="select-target"> 
+                            <span class="sel__select-svg">
+                                <svg width="6" height="12">
+                                    <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                                </svg>
+                            </span>
+                        </label>
+                        <div class="sel__wrapper sel__wrapper--dark">
+                            <label class="sel__option">
+                                <input type="checkbox" checked="" value="Русский"><span>Русский</span>
+                            </label>
+                            <label class="sel__option">
+                                <input type="checkbox" value="Английский"><span>Английский</span>
+                            </label>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+            <div class="header__details d-none d-lg-flex d-xl-none align-items-center">
+                <p>My-mail@mail.ru</p>
+                <a href="#" class="header__icon" title="">
+                    <svg class="socials__icon"  width="26" height="26"><use xlink:href="img/sprite.svg#icon-person"></use></svg>
+                </a>
+            </div>
+            <button class="header__register btn btn--dark js-popup d-flex d-lg-none d-xl-flex">Регистрация</button>
+            <button class="header__enter btn--light btn js-popup d-flex d-lg-none d-xl-flex">Вход</button>
+            <nav class="header__menu menu d-block d-lg-none">
+                <ul class="menu__list">
+                    <li class="menu__item"><a href="#" class="menu__link d-flex justify-content-center align-items-center" title="title">Токены</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link d-flex justify-content-center align-items-center" title="title">События</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link d-flex justify-content-center align-items-center" title="title">Хранилище</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link d-flex justify-content-center align-items-center" title="title">Файлы</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link menu__link--active d-flex justify-content-center align-items-center" title="title">Контракты</a></li>
+                </ul>
+            </nav>
+            <div class="header__socials socials d-grid d-lg-none">
+                <a href="" class="socials__link">
+                    <svg class="socials__icon"  width="26" height="26"><use xlink:href="img/sprite.svg#icon-facebook"></use></svg>
+                </a>
+                <a href="" class="socials__link">
+                    <svg class="socials__icon" width="26" height="26"><use xlink:href="img/sprite.svg#icon-telegram"></use></svg>
+                </a>
+                <a href="" class="socials__link">
+                    <svg class="socials__icon" width="26" height="26"><use xlink:href="img/sprite.svg#icon-linkedin"></use></svg>
+                </a>
+                <a href="" class="socials__link">
+                    <svg class="socials__icon" width="26" height="26"><use xlink:href="img/sprite.svg#icon-messenger"></use></svg>
+                </a>
+                <a href="" class="socials__link">
+                    <svg class="socials__icon" width="26" height="26"><use xlink:href="img/sprite.svg#icon-instagram"></use></svg>
+                </a>
+                <a href="" class="socials__link">
+                    <svg class="socials__icon" width="26" height="26"><use xlink:href="img/sprite.svg#icon-twitter"></use></svg>
+                </a>
+            </div>
+        </div>
+    </div>    
+</header>

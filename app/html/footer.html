@@ -1,0 +1,73 @@
+<footer class="footer">
+    <div class="footer__wrapper container-xxl d-flex justify-content-between align-items-center">
+        <a href="/" class="footer__logo logo" title="Logo"><img src="img/logo.svg" alt="logo" class="logo__img"></a>
+        <div class="footer__socials socials d-none d-lg-grid">
+            <a href="" class="socials__link">
+                <svg class="socials__icon"  width="26" height="26"><use xlink:href="img/sprite.svg#icon-facebook"></use></svg>
+            </a>
+            <a href="" class="socials__link">
+                <svg class="socials__icon" width="26" height="26"><use xlink:href="img/sprite.svg#icon-telegram"></use></svg>
+            </a>
+            <a href="" class="socials__link">
+                <svg class="socials__icon" width="26" height="26"><use xlink:href="img/sprite.svg#icon-linkedin"></use></svg>
+            </a>
+            <a href="" class="socials__link">
+                <svg class="socials__icon" width="26" height="26"><use xlink:href="img/sprite.svg#icon-messenger"></use></svg>
+            </a>
+            <a href="" class="socials__link">
+                <svg class="socials__icon" width="26" height="26"><use xlink:href="img/sprite.svg#icon-instagram"></use></svg>
+            </a>
+            <a href="" class="socials__link">
+                <svg class="socials__icon" width="26" height="26"><use xlink:href="img/sprite.svg#icon-twitter"></use></svg>
+            </a>
+        </div>
+        <div class="footer__terms">
+            <p>Tectum.io©, 2020</p>
+            <p>Terms & Conditions – Privacy</p> 
+            <p>Policy. Version 0.01</p>
+        </div>
+    </div>    
+</footer>
+<div class="popup">
+    <div class="popup__wrapper">
+        <button class="popup__close btn">
+            <svg width="18" height="18">
+                <use xlink:href="img/sprite.svg#icon-cross"></use></svg>
+            </span>
+        </button>
+        <h1 class="popup__name">Создайте Ваш аккаунт Tectum</h1>
+        <form class="popup__form needs-validation" action="" novalidate="">
+            <label class="popup__label d-grid">
+                <input class="popup__input form-control" required type="email" placeholder="Введите Ваш Email" />
+                <div class="invalid-feedback">
+                    Error Значение «Email» не является правильным email адресом.
+                  </div>
+            </label>            
+            <input type="submit" class="btn btn--light popup__btn" value="Зарегистрироваться" />
+        </form>
+        <p class="popup__politics">Регистрируясь, вы соглашаетесь с Tectum <a href="#" title="">Условиями предоставления услуг</a> и <a href="#" title="">Политикой конфиденциальности</a></p>
+        <p class="popup__exists">Уже есть аккаунт? <a href="#" title="">Войти</a></p>
+    </div>
+</div>
+<script>
+    (function () {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+                }
+
+                form.classList.add('was-validated')
+            }, false)
+            })
+        })()
+</script>
+<div class="overlay"></div>

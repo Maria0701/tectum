@@ -1,0 +1,18 @@
+.overlay {
+    position: fixed;    
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    background: rgba(52, 60, 77, 0.54);
+    backdrop-filter: blur(10px);
+    visibility: hidden;
+    opacity: 0;
+    transform: left 0.3s ease-in-out, visibility 0.3s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+.overlay--active {
+    top: 0;
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+}

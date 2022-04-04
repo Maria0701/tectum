@@ -1,0 +1,50 @@
+<section class="top">
+    <div class="top__wrapper container-md">
+        <div class="top__clusters row d-none d-lg-grid">
+            <div class="top__cluster col">
+                <div class="top__cluster-wrapper">
+                    <p class="top__text">Всего кластеров <span>28</span></p>
+                    <p class="top__text">Активных кластеров <span>28</span></p>
+                </div>
+            </div>
+            <div class="top__cluster col">
+                <div class="top__cluster-wrapper ">
+                    <p class="top__text">Всего Нод <span>68'000</span></p>
+                    <p class="top__text">Активных Нод <span>58'574</span></p>
+                </div>
+            </div>
+            <div class="top__cluster col">
+                <div class="top__cluster-wrapper">
+                    <p class="top__text">Всего Токенов</p>
+                    <p class="top__text"><span>38'278'154'268</span></p>
+                </div>
+            </div>
+            <div class="top__cluster col">
+                <div class="top__cluster-wrapper">
+                    <p class="top__text">Капитализация</p>
+                    <p class="top__text"><span>$ 72,581,690,992</span></p> 
+                </div>              
+            </div>
+        </div>
+        <div class="search top__search">
+            <form class="search__form" action="/search/" method="get" role="search">
+                <input id="search" name="text" required class="input search__input" placeholder="Хэш, Нода ID, Блокчейн ID, Транзакция или Кошелек" aria-label="Введите свой запрос для поиска по магазину" type="text" autocomplete="off">
+                <span class="search__close" tabindex="0" aria-label="очистить поле" onclick="this.closest('form').reset()">
+                    <svg class="search__icon" aria-hidden="true" width="20" height="20"><use xlink:href="img/sprite.svg#icon-cross"></svg>
+                </span> 
+                <button class="search__btn " type="submit" aria-label="Поиск по сайту">
+                    <svg class="search__icon" aria-hidden="true" width="20" height="20"><use xlink:href="img/sprite.svg#icon-search"></svg>
+                </button>                
+            </form>
+        </div>
+        <nav class="top__menu menu-list d-none d-lg-block">
+            <ul class="menu-list__list d-flex align-items-center">
+                <li class="menu-list__item"><a href="#" class="menu-list__link" title="title">Токены</a></li>
+                <li class="menu-list__item"><a href="#" class="menu-list__link" title="title">События</a></li>
+                <li class="menu-list__item"><a href="#" class="menu-list__link" title="title">Хранилище</a></li>
+                <li class="menu-list__item"><a href="#" class="menu-list__link" title="title">Файлы</a></li>
+                <li class="menu-list__item"><a href="#" class="menu-list__link menu-list__link--active" title="title">Контракты</a></li>
+            </ul>
+        </nav>
+    </div>
+</section>

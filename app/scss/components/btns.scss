@@ -1,0 +1,97 @@
+.btn {
+    font-family: inherit;
+    padding-top: 11.5px;
+    padding-bottom: 11.5px;
+    padding-left: 35px;
+    padding-right: 35px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    background-color: transparent;
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+
+    &:active {
+        cursor: grabbing;
+    }
+}
+
+.btn--light {
+    color: var(--textColor);
+    text-shadow: 0.4px 0.4px 0.6px var(--light-yellow);
+    background: linear-gradient(153.43deg, var(--yellow-sec) 29.75%, var(--yellow-third) 83.33%);
+    box-shadow: -2px -4px 13px var(--light-blue), 2px 4px 13px var(--textColor), -2px -4px 13px var(--light-blue), 2px 4px 18px var(--textColor);
+
+    &:hover,
+    &:focus {
+        background: linear-gradient(153.43deg, var(--yellow-third) 0%, var(--yellow-sec) 68.75%);
+    }
+
+    &:active {
+        background: linear-gradient(153.43deg, var(--yellow-fourth) 16.22%, var(--yellow-fifth) 50%, var(--yellow-sec) 83.33%);
+        box-shadow: -2px -4px 13px var(--light-blue), 2px 4px 13px rgba(6, 7, 10, 0.9), -2px -4px 13px var(--light-blue), 2px 4px 16px var(--textColor), inset -2px -4px 10px var(--light-yellow), inset 2px 4px 10px var(--yellow-six);
+        cursor: grabbing;
+    }
+}
+
+.btn--dark {
+    color: var(--white);
+    text-shadow: 0.3px 0.3px 0.6px var(--light-blue-third);
+    background: linear-gradient(159.44deg, var(--light-blue) 9.89%, var(--footer-color) 92.84%);
+    box-shadow: -2px -4px 13px rgba(80, 91, 117, 0.1), 2px 4px 13px rgba(6, 7, 10, 0.5), -2px -4px 13px var(--light-blue), 2px 4px 18px var(--textColor);
+
+    &:hover,
+    &:focus {
+        background: linear-gradient(159.44deg, var(--footer-color) 9.89%, var(--light-blue) 92.84%);
+    }
+
+    &:active {
+        background: linear-gradient(153.43deg, var(--dark-blue) 16.22%, var(--light-blue-fifth) 53.35%, var(--light-blue-third) 83.33%);
+        box-shadow: -2px -4px 13px rgba(80, 91, 117, 0.1), 2px 4px 13px rgba(6, 7, 10, 0.5), -2px -4px 13px var(--light-blue), 2px 4px 16px var(--textColor), inset -2px -4px 10px var(--light-blue-sixth), inset 2px 4px 10px var(--textColor);
+        cursor: grabbing;
+    }
+}
+
+.light-switcher__icon {
+    width: 19px;
+    height: 19px;
+}
+
+.light-switcher.day {
+    .light-switcher__icon--day {
+        display: block;        
+    }
+
+    .light-switcher__icon--night {
+        display: none;
+    }
+}
+
+.light-switcher {
+    width: 32px;
+    height: 32px;
+    background: var(--footer-color);
+    border: 2px solid var(--footer-color);
+    box-shadow: -2px -4px 10px rgba(80, 91, 117, 0.1), 2px 4px 10px rgba(6, 7, 10, 0.5), -2px -4px 10px rgba(80, 91, 117, 0.5), 2px 4px 13px rgba(6, 7, 10, 0.5);
+    border-radius: 10px;
+    cursor: pointer;
+
+    .light-switcher__icon--day {
+        display: none;
+    }
+
+    .light-switcher__icon--night {
+        display: block;
+    }
+
+    &:hover,
+    &:focus {
+        background: linear-gradient(159.44deg, #12161E 9.89%, #222837 92.84%);
+    }
+
+    &:active {
+        cursor: grabbing;
+        background: linear-gradient(159.44deg, #12161E 9.89%, #222837 92.84%);
+    }
+}

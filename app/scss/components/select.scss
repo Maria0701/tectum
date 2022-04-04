@@ -1,0 +1,224 @@
+select::-ms-expand {
+    display: none;
+}
+
+select {
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 0;
+    background-color: transparent;   
+}
+
+
+.sel__input {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 13px;
+    padding-right: 17px;
+    width: 100%;
+    font-family: inherit;
+    //font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.025em;
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+
+    &:hover,
+    &:focus,
+    &:focus-within {
+        outline: 0;
+    }
+
+    &:active {
+        cursor: grabbing;
+    }
+}
+
+.sel__input--dark {
+    color: var(--white);
+    text-shadow: 0.3px 0.3px 0.6px var(--light-blue-third);
+    background: var(--footer-color);
+    border: 2px solid var(--footer-color);
+    box-sizing: border-box;
+    box-shadow: -2px -4px 10px rgba(80, 91, 117, 0.1), 2px 4px 10px rgba(6, 7, 10, 0.5), -2px -4px 10px rgba(80, 91, 117, 0.5), 2px 4px 13px rgba(6, 7, 10, 0.5);
+
+    &:hover,
+    &:focus,
+    &:focus-within {
+        background: linear-gradient(159.44deg, #12161E 9.89%, #222837 92.84%);
+        box-shadow: -2px -4px 10px rgba(80, 91, 117, 0.1), 2px 4px 10px rgba(6, 7, 10, 0.5), -2px -4px 10px rgba(80, 91, 117, 0.5), 2px 4px 13px rgba(6, 7, 10, 0.5);
+        outline: 0;
+    }
+}
+
+.sel__input--table {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: .005em;
+    color: var(--textColor);
+}
+
+.select__item {
+    position: relative;
+    display: block;
+    width: auto;
+
+    input {
+        opacity: 0;
+
+        &:checked {
+            color: var(--yellow);
+        }
+    }
+   
+    &:hover,
+    &:focus {
+        color: var(--yellow);
+    }
+}
+
+.select__list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--footer-color);
+    border-radius: 10px;
+}
+
+.sel {
+    position: relative;
+}
+
+.sel__label--currency {
+    width: 77px;
+}
+
+.sel__label--lang {
+    width: 126px;
+
+    input {
+        padding-left: 32px;
+    }
+}
+
+.sel__label--table {
+    width: 105px;
+
+    .sel__select-svg {
+        top: 50%;
+        right: 0;
+        width: 18px;
+        height: 10px;
+    }
+}
+
+.sel__wrapper {
+    display: none;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 50%;
+    z-index: 2;
+    flex-direction: column;    
+    border-radius: 10px;
+    transform: translateX(-50%);
+}
+
+.sel__wrapper--dark {
+    background: var(--footer-color);
+    border: 1px solid #222837;
+    box-sizing: border-box;
+    box-shadow: 2px 4px 8px rgba(6, 7, 10, 0.6);
+}
+
+.sel__wrapper--table {
+    background-color: white;
+    filter: drop-shadow(2px 4px 16px rgba(6, 7, 10, 0.15));
+
+    .sel__option {
+        &:hover,
+        &:focus {
+        color: var(--textColor);
+        background-color: var(--yellow);
+    }
+    }
+}
+
+.sel.opened .sel__wrapper {
+    display:flex;
+}
+
+.sel.opened svg {
+    transform: rotate(180deg);
+}
+
+.sel__select-svg {
+    position: absolute;
+    right: 12.25px;
+    top: 9.25px;
+    display: block;
+    width: 6px;
+    height: 12px;
+    transform: rotate(90deg);
+}
+
+.sel__option {
+    position: relative;
+    display: flex;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        color: var(--yellow);
+    }
+
+    &:active {
+        cursor: grabbing;
+    }
+
+    input {
+        position:absolute;
+        top: 0;
+        left: 50%;
+        opacity: 0;
+    }
+}
+
+.sel__select-planet {
+    position: absolute;
+    left: 15px;
+    top: 8.5px;
+    z-index: 1;
+    display: block;
+    width: 15px;
+    height: 15px;
+    
+    svg {
+        display: block;
+    }
+}
+
+.sel__select-svg {
+    position: absolute;
+    right: 12.25px;
+    top: 11.25px;
+    display: block;
+    width: 6px;
+    height: 12px;
+    transform: rotate(90deg);
+
+    svg {
+        display: block;
+    }
+}

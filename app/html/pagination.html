@@ -1,0 +1,45 @@
+<div class="table-aria__pagination pagination d-grid  justify-content-center align-items-center">
+    <div class="pagination__first-wrap d-flex justify-content-center align-items-center">
+        <a class="pagination__btn pagination__btn--disabled  d-flex justify-content-center align-items-center" href="#" disabled aria-label="на первую страницу">
+            <svg class="socials__icon" width="10" height="10.5"><use xlink:href="img/sprite.svg#icon-double-arrow"></use></svg> 
+        </a>
+        <a class="pagination__btn pagination__btn--disabled  d-flex justify-content-center align-items-center" href="#" disabled aria-label="на следующую страницу">
+            <svg class="socials__icon" width="6" height="10.5"><use xlink:href="img/sprite.svg#icon-arrow"></use></svg> 
+        </a>
+        <label class="pagination__label">
+            <input class="pagination__input pagination__input--change" value="1" />
+        </label>
+        <div class="pagination__text">из 21</div>
+        <a class="pagination__btn  d-flex justify-content-center align-items-center" href="#" aria-label="на следующую">
+            <svg class="socials__icon" width="6" height="10.5"><use xlink:href="img/sprite.svg#icon-arrow"></use></svg> 
+        </a>
+        <a class="pagination__btn  d-flex justify-content-center align-items-center" href="#" aria-label="на предыдущую страницу">
+            <svg class="socials__icon" width="10" height="10.5"><use xlink:href="img/sprite.svg#icon-double-arrow"></use></svg> 
+        </a>
+    </div>
+    <div class="pagination__second-wrap d-flex justify-content-center align-items-center">
+        <div class="pagination__text">Показывать по</div>
+        <div class="pagination__select" data-select="select">
+            <label class="pagination__label">
+                <input class="pagination__input pagination__input--num" value="10" data-set="select-target"/> 
+                <span class="pagination__select-svg">
+                    <svg width="6" height="12">
+                        <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                    </svg>
+                </span>
+            </label>
+            <div class="pagination__wrapper">
+                <label class="pagination__option">
+                    <input type="checkbox" checked  value="10"><span>10</span>
+                </label>
+                <label class="pagination__option">
+                    <input type="checkbox" value="25"><span>25</span>
+                </label>
+                <label class="pagination__option">
+                    <input type="checkbox" value="50"><span>50</span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+</div>

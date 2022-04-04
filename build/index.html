@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <header class="header">
+    <div class="header__container container-xxl d-flex align-items-center ">
+        <a class="header__logo log" href="/" title="Logo"><img src="img/logo.svg" alt="logo" class="logo__img"></a>
+        <button class="light-switcher header__btn d-flex justify-content-center align-items-center" onclick="this.classList.toggle('day')">
+            <span class="light-switcher__icon light-switcher__icon--day">
+                <svg width="16" height="16">
+                    <use xlink:href="img/sprite.svg#icon-light"></use>
+                </svg>  
+            </span>
+            <span class="light-switcher__icon light-switcher__icon--night">
+                <svg width="16" height="16">
+                    <use xlink:href="img/sprite.svg#icon-night"></use>
+                </svg>  
+            </span>
+        </button>
+        <a class="header__bell d-none d-lg-flex justify-content-center align-items-center" href="#" title="fgkiejg">
+            <svg width="15.18" height="19.15">
+                <use xlink:href="img/sprite.svg#icon-bell"></use>
+            </svg>
+        </a>
+        <button class="header__opener d-block d-lg-none">
+            <span><span></span></span>
+        </button>
+        <div class="header__menu-wrapper">        
+            <div class="header__switchers d-flex d-lg-none d-xl-flex align-items-center">
+                <div class="header__sel-wrapper header__sel-wrapper--curr">
+                    <div class="sel sel__label--currency" data-select="select">
+                        <label class="sel__label">
+                            <input class="sel__input sel__input--dark" value="10" data-set="select-target"> 
+                            <span class="sel__select-svg">
+                                <svg width="6" height="12">
+                                    <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                                </svg>
+                            </span>
+                        </label>
+                        <div class="sel__wrapper  sel__wrapper--dark">
+                            <label class="sel__option">
+                                <input type="checkbox" checked="" value="USD"><span>USD</span>
+                            </label>
+                            <label class="sel__option">
+                                <input type="checkbox" value="MOZ"><span>MOZ</span>
+                            </label>
+                            <label class="sel__option">
+                                <input type="checkbox" value="TEC"><span>TEC</span>
+                            </label>
+                            <label class="sel__option">
+                                <input type="checkbox" value="BTC"><span>BTC</span>
+                            </label>
+                            <label class="sel__option">
+                                <input type="checkbox" value="ETH"><span>ETH</span>
+                            </label>
+                            <label class="sel__option">
+                                <input type="checkbox" value="USD"><span>USD</span>
+                            </label>
+                            <label class="sel__option">
+                                <input type="checkbox" value="EUR"><span>EUR</span>
+                            </label>
+                            <label class="sel__option">
+                                <input type="checkbox" value="GBP"><span>GBP</span>
+                            </label>
+                            <label class="sel__option">
+                                <input type="checkbox" value="CAD"><span>CAD</span>
+                            </label>
+                            <label class="sel__option">
+                                <input type="checkbox" value="AUD"><span>AUD</span>
+                            </label>
+                            <label class="sel__option">
+                                <input type="checkbox" value="GBP"><span>RUB</span>
+                            </label>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="header__sel-wrapper header__sel-wrapper--lang">                    
+                    <div class="sel sel__label--lang" data-select="select">
+                        <span class="sel__select-planet">                    
+                            <svg width="16" height="15">
+                                <use xlink:href="img/sprite.svg#icon-planet2"></use>
+                            </svg>                    
+                        </span>
+                        <label class="sel__label">
+                            <input class="sel__input sel__input--dark" value="10" data-set="select-target"> 
+                            <span class="sel__select-svg">
+                                <svg width="6" height="12">
+                                    <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                                </svg>
+                            </span>
+                        </label>
+                        <div class="sel__wrapper sel__wrapper--dark">
+                            <label class="sel__option">
+                                <input type="checkbox" checked="" value="Русский"><span>Русский</span>
+                            </label>
+                            <label class="sel__option">
+                                <input type="checkbox" value="Английский"><span>Английский</span>
+                            </label>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+            <div class="header__details d-none d-lg-flex d-xl-none align-items-center">
+                <p>My-mail@mail.ru</p>
+                <a href="#" class="header__icon" title="">
+                    <svg class="socials__icon" width="26" height="26"><use xlink:href="img/sprite.svg#icon-person"></use></svg>
+                </a>
+            </div>
+            <button class="header__register btn btn--dark js-popup d-flex d-lg-none d-xl-flex">Регистрация</button>
+            <button class="header__enter btn--light btn js-popup d-flex d-lg-none d-xl-flex">Вход</button>
+            <nav class="header__menu menu d-block d-lg-none">
+                <ul class="menu__list">
+                    <li class="menu__item"><a href="#" class="menu__link d-flex justify-content-center align-items-center" title="title">Токены</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link d-flex justify-content-center align-items-center" title="title">События</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link d-flex justify-content-center align-items-center" title="title">Хранилище</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link d-flex justify-content-center align-items-center" title="title">Файлы</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link menu__link--active d-flex justify-content-center align-items-center" title="title">Контракты</a></li>
+                </ul>
+            </nav>
+            <div class="header__socials socials d-grid d-lg-none">
+                <a href="" class="socials__link">
+                    <svg class="socials__icon" width="26" height="26"><use xlink:href="img/sprite.svg#icon-facebook"></use></svg>
+                </a>
+                <a href="" class="socials__link">
+                    <svg class="socials__icon" width="26" height="26"><use xlink:href="img/sprite.svg#icon-telegram"></use></svg>
+                </a>
+                <a href="" class="socials__link">
+                    <svg class="socials__icon" width="26" height="26"><use xlink:href="img/sprite.svg#icon-linkedin"></use></svg>
+                </a>
+                <a href="" class="socials__link">
+                    <svg class="socials__icon" width="26" height="26"><use xlink:href="img/sprite.svg#icon-messenger"></use></svg>
+                </a>
+                <a href="" class="socials__link">
+                    <svg class="socials__icon" width="26" height="26"><use xlink:href="img/sprite.svg#icon-instagram"></use></svg>
+                </a>
+                <a href="" class="socials__link">
+                    <svg class="socials__icon" width="26" height="26"><use xlink:href="img/sprite.svg#icon-twitter"></use></svg>
+                </a>
+            </div>
+        </div>
+    </div>    
+</header>
+    <main>
+        <section class="top">
+    <div class="top__wrapper container-md">
+        <div class="top__clusters row d-none d-lg-grid">
+            <div class="top__cluster col">
+                <div class="top__cluster-wrapper">
+                    <p class="top__text">Всего кластеров <span>28</span></p>
+                    <p class="top__text">Активных кластеров <span>28</span></p>
+                </div>
+            </div>
+            <div class="top__cluster col">
+                <div class="top__cluster-wrapper ">
+                    <p class="top__text">Всего Нод <span>68'000</span></p>
+                    <p class="top__text">Активных Нод <span>58'574</span></p>
+                </div>
+            </div>
+            <div class="top__cluster col">
+                <div class="top__cluster-wrapper">
+                    <p class="top__text">Всего Токенов</p>
+                    <p class="top__text"><span>38'278'154'268</span></p>
+                </div>
+            </div>
+            <div class="top__cluster col">
+                <div class="top__cluster-wrapper">
+                    <p class="top__text">Капитализация</p>
+                    <p class="top__text"><span>$ 72,581,690,992</span></p> 
+                </div>              
+            </div>
+        </div>
+        <div class="search top__search">
+            <form class="search__form" action="/search/" method="get" role="search">
+                <input id="search" name="text" required="" class="input search__input" placeholder="Хэш, Нода ID, Блокчейн ID, Транзакция или Кошелек" aria-label="Введите свой запрос для поиска по магазину" type="text" autocomplete="off">
+                <span class="search__close" tabindex="0" aria-label="очистить поле" onclick="this.closest('form').reset()">
+                    <svg class="search__icon" aria-hidden="true" width="20" height="20"><use xlink:href="img/sprite.svg#icon-cross"></use></svg>
+                </span> 
+                <button class="search__btn " type="submit" aria-label="Поиск по сайту">
+                    <svg class="search__icon" aria-hidden="true" width="20" height="20"><use xlink:href="img/sprite.svg#icon-search"></use></svg>
+                </button>                
+            </form>
+        </div>
+        <nav class="top__menu menu-list d-none d-lg-block">
+            <ul class="menu-list__list d-flex align-items-center">
+                <li class="menu-list__item"><a href="#" class="menu-list__link" title="title">Токены</a></li>
+                <li class="menu-list__item"><a href="#" class="menu-list__link" title="title">События</a></li>
+                <li class="menu-list__item"><a href="#" class="menu-list__link" title="title">Хранилище</a></li>
+                <li class="menu-list__item"><a href="#" class="menu-list__link" title="title">Файлы</a></li>
+                <li class="menu-list__item"><a href="#" class="menu-list__link menu-list__link--active" title="title">Контракты</a></li>
+            </ul>
+        </nav>
+    </div>
+</section>
+        <section class="table-aria container-xl">
+    <div class="table-aria__wrapper container">
+        <div class="table-aria__title-wrapper">
+            <h1 class="title table-aria__title">События</h1>
+            <div class="sel " data-select="select">
+                <label class="sel__label sel__label--table">
+                    <input class="sel__input sel__input--table" value="Все" data-set="select-target"> 
+                    <span class="sel__select-svg">
+                        <svg width="10" height="18">
+                            <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                        </svg>
+                    </span>
+                </label>
+                <div class="sel__wrapper  sel__wrapper--table">
+                    <label class="sel__option">
+                        <input type="checkbox" checked="" value="ВСЕ"><span>ВСЕ</span>
+                    </label>
+                    <label class="sel__option">
+                        <input type="checkbox" value="USD"><span>USD</span>
+                    </label>
+                    <label class="sel__option">
+                        <input type="checkbox" value="MOZ"><span>MOZ</span>
+                    </label>
+                    <label class="sel__option">
+                        <input type="checkbox" value="TEC"><span>TEC</span>
+                    </label>
+                    <label class="sel__option">
+                        <input type="checkbox" value="BTC"><span>BTC</span>
+                    </label>
+                    <label class="sel__option">
+                        <input type="checkbox" value="ETH"><span>ETH</span>
+                    </label>
+                    <label class="sel__option">
+                        <input type="checkbox" value="USD"><span>USD</span>
+                    </label>
+                    <label class="sel__option">
+                        <input type="checkbox" value="EUR"><span>EUR</span>
+                    </label>
+                    <label class="sel__option">
+                        <input type="checkbox" value="GBP"><span>GBP</span>
+                    </label>
+                    <label class="sel__option">
+                        <input type="checkbox" value="CAD"><span>CAD</span>
+                    </label>
+                    <label class="sel__option">
+                        <input type="checkbox" value="AUD"><span>AUD</span>
+                    </label>
+                    <label class="sel__option">
+                        <input type="checkbox" value="GBP"><span>RUB</span>
+                    </label>
+                </div>
+            </div> 
+        </div>
+        <div class="table-aria__table-wrapper table-responsive">
+            <table class="table-aria__table table align-middle shadow-sm ">
+                <thead class="table-dark">
+                    <tr class="table__row">
+                        <th class="table__th">
+                            Сеть</th>
+                        <th class="table__th">Блок</th>
+                        <th class="table__th">Хеш события</th>
+                        <th class="table__th">Сумма</th>
+                        <th class="table__th">Валюта</th>
+                        <th class="table__th">Дата/Время</th>
+                    </tr>
+                </thead>
+                <tr class="table__row">
+                    <td class="table__td">
+                        <span>
+                            <span class="table__curr">
+                                <svg width="18" height="18">
+                                    <use xlink:href="img/sprite.svg#icon-bitcoin"></use>
+                                </svg>
+                            </span>
+                            Bitcoin
+                        </span>
+                    </td>
+                    <td class="table__td">123456</td>
+                    <td class="table__td">
+                        <span><span class="copy" onclick="copyToClipboard(this)">CYjJTSev87kAdgdb1FvueeTT6cnf2TLUdpDDxcFup8J</span>
+                            <button class="table__copy" onclick="copyToClipboard(this)" aria-label="Скопировать содержание">
+                                <svg width="24" height="24">
+                                    <use xlink:href="img/sprite.svg#icon-sheets"></use>
+                                </svg>                            
+                            </button>
+                        </span>
+                    </td>
+                    <td class="table__td">0.0172000</td>
+                    <td class="table__td">
+                        <span>
+                            <span class="table__curr">
+                                <svg width="18" height="18">
+                                    <use xlink:href="img/sprite.svg#icon-bitcoin"></use>
+                                </svg>
+                            </span>
+                        BTC</span>
+                    </td>
+                    <td class="table__td">2022/01/22   15:19:08</td>
+                </tr>
+                <tr class="table__row">
+                    <td class="table__td">
+                        <span>
+                            <span class="table__curr">
+                                <svg width="18" height="18"><use xlink:href="img/sprite.svg#icon-bitcoin"></use></svg></span>
+                            Bitcoin
+                        </span>
+                    </td>
+                    <td class="table__td">123456</td>
+                    <td class="table__td">
+                        <span><span class="copy" onclick="copyToClipboard(this)">CYjJTSev87kAdgdb1FvueeTT6cnf2TLUdpDDxcFuwp8J</span>
+                            <button class="table__copy" aria-label="Скопировать содержание" onclick="copyToClipboard(this)">
+                                <svg width="24" height="24">
+                                    <use xlink:href="img/sprite.svg#icon-sheets"></use>
+                                </svg>                            
+                            </button>
+                        </span>
+                    </td>
+                    <td class="table__td">0.017200</td>
+                    <td class="table__td">
+                        <span>
+                            <span class="table__curr"><svg width="18" height="18">
+                                <use xlink:href="img/sprite.svg#icon-bitcoin"></use></svg>
+                            </span>
+                            BTC</span>
+                        
+                    </td>
+                    <td class="table__td">2022/01/22   15:19:08</td>
+                </tr>
+                <tr class="table__row">
+                    <td class="table__td">
+                        <span>
+                            <span class="table__curr"><svg width="18" height="18"><use xlink:href="img/sprite.svg#icon-bitcoin"></use></svg></span>
+                            Bitcoin
+                        </span>
+                    </td>
+                    <td class="table__td">12345</td>
+                    <td class="table__td"><span><span class="copy" onclick="copyToClipboard(this)">CYjJTSev87kAdgdb1FveeTT6cnf2TLUdpDDxcFuwp8J</span>
+                        <button class="table__copy" aria-label="Скопировать содержание" onclick="copyToClipboard(this)">
+                            <svg width="24" height="24">
+                                <use xlink:href="img/sprite.svg#icon-sheets"></use>
+                            </svg>                            
+                        </button>
+                    </span></td>
+                    <td class="table__td">0.0002023</td>
+                    <td class="table__td">
+                        <span>
+                            <span class="table__curr"><svg width="18" height="18">
+                                <use xlink:href="img/sprite.svg#icon-bitcoin"></use></svg>
+                            </span>
+                            BTC
+                        </span>
+                    </td>
+                    <td class="table__td">2022/01/22   15:19:08</td>
+                </tr>
+                <tr class="table__row">
+                    <td class="table__td">
+                        <span>
+                            <span class="table__curr">
+                                <svg width="18" height="18">
+                                    <use xlink:href="img/sprite.svg#icon-etherium"></use>
+                                </svg>
+                            </span>
+                            Ethereum
+                        </span>
+                    </td>
+                    <td class="table__td">12345</td>
+                    <td class="table__td"><span><span class="copy" onclick="copyToClipboard(this)">CYjJTSev87kAdgdb1FvueeTT6cnf2TLUdpDDxcFuwp8J</span>
+                        <button class="table__copy" aria-label="Скопировать содержание" onclick="copyToClipboard(this)">
+                            <svg width="24" height="24">
+                                <use xlink:href="img/sprite.svg#icon-sheets"></use>
+                            </svg>                            
+                        </button>
+                    </span></td>
+                    <td class="table__td">1 097</td>
+                    <td class="table__td">
+                        <span>
+                            <span class="table__curr">
+                                <svg width="18" height="18">
+                                    <use xlink:href="img/sprite.svg#icon-usdt"></use>
+                                </svg>
+                            </span>
+                            USDT
+                        </span>
+                    </td>
+                    <td class="table__td">2022/01/22   15:19:08</td>
+                </tr>
+                <tr class="table__row">
+                    <td class="table__td">
+                        <span>
+                            <span class="table__curr">
+                                <svg width="18" height="18">
+                                    <use xlink:href="img/sprite.svg#icon-etherium"></use>
+                                </svg>
+                            </span>
+                            Ethereum
+                        </span>
+                    </td>
+                    <td class="table__td">12345</td>
+                    <td class="table__td"><span><span class="copy" onclick="copyToClipboard(this)">CYjJTSev87kAdgdb1FvueeTT6cnf2TLUdpDDxcFuwp8J</span>
+                        <button class="table__copy" aria-label="Скопировать содержание" onclick="copyToClipboard(this)">
+                            <svg width="24" height="24">
+                                <use xlink:href="img/sprite.svg#icon-sheets"></use>
+                            </svg>                            
+                        </button>
+                    </span></td>
+                    <td class="table__td">490</td>
+                    <td class="table__td">
+                        <span>
+                            <span class="table__curr">
+                                <svg width="18" height="18">
+                                    <use xlink:href="img/sprite.svg#icon-usdt"></use>
+                                </svg>
+                            </span>
+                            USDT
+                        </span>
+                    </td>
+                    <td class="table__td">2022/01/22   15:19:08</td>
+                </tr>
+                <tr class="table__row">
+                    <td class="table__td">
+                        <span>
+                            <span class="table__curr">
+                                <svg width="18" height="18">
+                                    <use xlink:href="img/sprite.svg#icon-bitcoin"></use></svg>
+                                </span>
+                            Bitcoin
+                        </span>
+                    </td>
+                    <td class="table__td">1234</td>
+                    <td class="table__td"><span><span class="copy" onclick="copyToClipboard(this)">CYjJTSev87kAdgdb1FvueeTT6cnf2TLUdpDDxcFuwp8J</span>
+                        <button class="table__copy" aria-label="Скопировать содержание" onclick="copyToClipboard(this)">
+                            <svg width="24" height="24">
+                                <use xlink:href="img/sprite.svg#icon-sheets"></use>
+                            </svg>                            
+                        </button>
+                    </span></td>
+                    <td class="table__td">0.01</td>
+                    <td class="table__td">
+                        <span>
+                            <span class="table__curr">
+                                <svg width="18" height="18">
+                                    <use xlink:href="img/sprite.svg#icon-bitcoin"></use>
+                                </svg>
+                            </span>
+                            BTC
+                        </span>
+                    </td>
+                    <td class="table__td">2022/01/22   15:19:08</td>
+                </tr>
+                <tr class="table__row">
+                    <td class="table__td">
+                        <span>
+                            <span class="table__curr">
+                                <svg width="18" height="18">
+                                    <use xlink:href="img/sprite.svg#icon-lightcoin"></use>
+                                </svg>
+                            </span>
+                            Litecoin
+                        </span>
+                    </td>
+                    <td class="table__td">1234</td>
+                    <td class="table__td"><span><span class="copy" onclick="copyToClipboard(this)">CYjJTSev87kAdgdb1FvueeTT6cnf2TLUDDxcFuwp8J</span>
+                        <button class="table__copy" aria-label="Скопировать содержание" onclick="copyToClipboard(this)">
+                            <svg width="24" height="24">
+                                <use xlink:href="img/sprite.svg#icon-sheets"></use>
+                            </svg>                            
+                        </button>
+                    </span></td>
+                    <td class="table__td">15</td>
+                    <td class="table__td">
+                        <span>
+                            <span class="table__curr"><svg width="18" height="18"><use xlink:href="img/sprite.svg#icon-lightcoin"></use></svg></span>
+                            LTC
+                        </span>
+                    </td>
+                    <td class="table__td">2022/01/22   15:19:08</td>
+                </tr>
+                <tr class="table__row">
+                    <td class="table__td">
+                        <span>                   
+                            <span class="table__curr">
+                                <svg width="18" height="18">
+                                    <use xlink:href="img/sprite.svg#icon-bitcoin"></use>
+                                </svg>
+                            </span>
+                            Bitcoin
+                        </span>
+                    </td>
+                    <td class="table__td">1234</td>
+                    <td class="table__td"><span><span class="copy" onclick="copyToClipboard(this)">CYjJTSev87kAdgdb1FvueeTT6cnf2TLUdpDDxcFuwp8J</span>
+                        <button class="table__copy" aria-label="Скопировать содержание" onclick="copyToClipboard(this)">
+                            <svg width="24" height="24">
+                                <use xlink:href="img/sprite.svg#icon-sheets"></use>
+                            </svg>                            
+                        </button>
+                    </span></td>
+                    <td class="table__td">1501</td>
+                    <td class="table__td">
+                        <span>
+                            <span class="table__curr">
+                                <svg width="18" height="18">
+                                    <use xlink:href="img/sprite.svg#icon-bitcoin"></use>
+                                </svg>
+                            </span>
+                            BTC
+                        </span>
+                    </td>
+                    <td class="table__td">2022/01/22   15:19:08</td>
+                </tr>
+                <tr class="table__row">
+                    <td class="table__td">
+                        <span>
+                            <span class="table__curr">
+                                <svg width="18" height="18">
+                                    <use xlink:href="img/sprite.svg#icon-etherium"></use>
+                                </svg>
+                            </span>
+                            Ethereum
+                        </span>
+                    </td>
+                    <td class="table__td">1234</td>
+                    <td class="table__td"><span><span class="copy" onclick="copyToClipboard(this)">CYjJTSev87kAdgdb1FvueeTT6nf2TLUdpDDxcFuwp8J</span>
+                        <button class="table__copy" aria-label="Скопировать содержание" onclick="copyToClipboard(this)">
+                            <svg width="24" height="24">
+                                <use xlink:href="img/sprite.svg#icon-sheets"></use>
+                            </svg>                            
+                        </button>
+                    </span></td>
+                    <td class="table__td">30</td>
+                    <td class="table__td">
+                        <span>
+                            <span class="table__curr">
+                                <svg width="18" height="18">
+                                    <use xlink:href="img/sprite.svg#icon-usdt"></use>
+                                </svg>
+                            </span>
+                            USDT
+                        </span>
+                    </td>                    
+                    <td class="table__td">2022/01/22   15:19:08</td>
+                </tr>
+                <tr class="table__row">
+                    <td class="table__td">
+                        <span>
+                            <span class="table__curr">
+                                <svg width="18" height="18">
+                                    <use xlink:href="img/sprite.svg#icon-lightcoin"></use>
+                                </svg>
+                            </span>
+                            Litecoin
+                        </span>
+                    </td>
+                    <td class="table__td">1234</td>
+                    <td class="table__td"><span><span class="copy" onclick="copyToClipboard(this)">CYjJTSev87kAdgdb1FvueeTT6cnf2TLUdpDDxcFuwp8J</span>
+                        <button class="table__copy" aria-label="Скопировать содержание" onclick="copyToClipboard(this)">
+                            <svg width="24" height="24">
+                                <use xlink:href="img/sprite.svg#icon-sheets"></use>
+                            </svg>                            
+                        </button>
+                    </span></td>
+                    <td class="table__td">34.021</td>
+                    <td class="table__td">
+                        <span>
+                            <span class="table__curr">
+                                <svg width="18" height="18">
+                                    <use xlink:href="img/sprite.svg#icon-lightcoin"></use>
+                                </svg>
+                            </span>                        
+                            LTC
+                        </span>
+                    </td>
+                    <td class="table__td">2022/01/22   15:19:08</td>
+                </tr>
+            </table>
+            <script>
+                function copyToClipboard(elt) {                    
+                    const textValue = elt.closest('td').querySelector('.copy').innerHTML;
+                    navigator.clipboard.writeText(textValue.value);
+                    alert(textValue);
+                }
+            </script>
+        </div>
+        <div class="table-aria__pagination pagination d-grid  justify-content-center align-items-center">
+    <div class="pagination__first-wrap d-flex justify-content-center align-items-center">
+        <a class="pagination__btn pagination__btn--disabled  d-flex justify-content-center align-items-center" href="#" disabled="" aria-label="на первую страницу">
+            <svg class="socials__icon" width="10" height="10.5"><use xlink:href="img/sprite.svg#icon-double-arrow"></use></svg> 
+        </a>
+        <a class="pagination__btn pagination__btn--disabled  d-flex justify-content-center align-items-center" href="#" disabled="" aria-label="на следующую страницу">
+            <svg class="socials__icon" width="6" height="10.5"><use xlink:href="img/sprite.svg#icon-arrow"></use></svg> 
+        </a>
+        <label class="pagination__label">
+            <input class="pagination__input pagination__input--change" value="1">
+        </label>
+        <div class="pagination__text">из 21</div>
+        <a class="pagination__btn  d-flex justify-content-center align-items-center" href="#" aria-label="на следующую">
+            <svg class="socials__icon" width="6" height="10.5"><use xlink:href="img/sprite.svg#icon-arrow"></use></svg> 
+        </a>
+        <a class="pagination__btn  d-flex justify-content-center align-items-center" href="#" aria-label="на предыдущую страницу">
+            <svg class="socials__icon" width="10" height="10.5"><use xlink:href="img/sprite.svg#icon-double-arrow"></use></svg> 
+        </a>
+    </div>
+    <div class="pagination__second-wrap d-flex justify-content-center align-items-center">
+        <div class="pagination__text">Показывать по</div>
+        <div class="pagination__select" data-select="select">
+            <label class="pagination__label">
+                <input class="pagination__input pagination__input--num" value="10" data-set="select-target"> 
+                <span class="pagination__select-svg">
+                    <svg width="6" height="12">
+                        <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                    </svg>
+                </span>
+            </label>
+            <div class="pagination__wrapper">
+                <label class="pagination__option">
+                    <input type="checkbox" checked="" value="10"><span>10</span>
+                </label>
+                <label class="pagination__option">
+                    <input type="checkbox" value="25"><span>25</span>
+                </label>
+                <label class="pagination__option">
+                    <input type="checkbox" value="50"><span>50</span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+</div>
+    </div>
+</section>        
+    </main>
+    <footer class="footer">
+    <div class="footer__wrapper container-xxl d-flex justify-content-between align-items-center">
+        <a href="/" class="footer__logo logo" title="Logo"><img src="img/logo.svg" alt="logo" class="logo__img"></a>
+        <div class="footer__socials socials d-none d-lg-grid">
+            <a href="" class="socials__link">
+                <svg class="socials__icon" width="26" height="26"><use xlink:href="img/sprite.svg#icon-facebook"></use></svg>
+            </a>
+            <a href="" class="socials__link">
+                <svg class="socials__icon" width="26" height="26"><use xlink:href="img/sprite.svg#icon-telegram"></use></svg>
+            </a>
+            <a href="" class="socials__link">
+                <svg class="socials__icon" width="26" height="26"><use xlink:href="img/sprite.svg#icon-linkedin"></use></svg>
+            </a>
+            <a href="" class="socials__link">
+                <svg class="socials__icon" width="26" height="26"><use xlink:href="img/sprite.svg#icon-messenger"></use></svg>
+            </a>
+            <a href="" class="socials__link">
+                <svg class="socials__icon" width="26" height="26"><use xlink:href="img/sprite.svg#icon-instagram"></use></svg>
+            </a>
+            <a href="" class="socials__link">
+                <svg class="socials__icon" width="26" height="26"><use xlink:href="img/sprite.svg#icon-twitter"></use></svg>
+            </a>
+        </div>
+        <div class="footer__terms">
+            <p>Tectum.io©, 2020</p>
+            <p>Terms & Conditions – Privacy</p> 
+            <p>Policy. Version 0.01</p>
+        </div>
+    </div>    
+</footer>
+<div class="popup">
+    <div class="popup__wrapper">
+        <button class="popup__close btn">
+            <svg width="18" height="18">
+                <use xlink:href="img/sprite.svg#icon-cross"></use></svg>
+            
+        </button>
+        <h1 class="popup__name">Создайте Ваш аккаунт Tectum</h1>
+        <form class="popup__form needs-validation" action="" novalidate="">
+            <label class="popup__label d-grid">
+                <input class="popup__input form-control" required="" type="email" placeholder="Введите Ваш Email">
+                <div class="invalid-feedback">
+                    Error Значение «Email» не является правильным email адресом.
+                  </div>
+            </label>            
+            <input type="submit" class="btn btn--light popup__btn" value="Зарегистрироваться">
+        </form>
+        <p class="popup__politics">Регистрируясь, вы соглашаетесь с Tectum <a href="#" title="">Условиями предоставления услуг</a> и <a href="#" title="">Политикой конфиденциальности</a></p>
+        <p class="popup__exists">Уже есть аккаунт? <a href="#" title="">Войти</a></p>
+    </div>
+</div>
+<script>
+    (function () {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+                }
+
+                form.classList.add('was-validated')
+            }, false)
+            })
+        })()
+</script>
+<div class="overlay"></div>    
+    <script src="js/index.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+.table {
+    width: 100%;
+    border-collapse:collapse;
+}
+.table-responsive {
+    width: calc(100% + 40px);
+    overflow: hidden;
+    overflow-x: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+.table__th {
+    padding-top: 15.5px !important;
+    padding-bottom: 15.5px !important;
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: var(--white);
+    text-align: left;
+    background-color: var(--footer-color);
+}
+
+.table__td {
+    vertical-align: middle;    
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    padding-right: 9px !important;
+    padding-left: 9px !important;
+    font-size: 14px;
+    line-height: 16px;
+    white-space: nowrap;
+    border: 0;
+
+    &>span {
+        display: flex;
+        align-items: center;
+    }
+
+    &:nth-child(2),
+    &:nth-child(4),
+    &:nth-child(5) {
+        color: #5C6987
+    }
+
+    &:nth-child(4) {
+        text-align: right;
+    }
+
+    .copy {
+        max-width: calc(100% - 26px);
+        white-space: nowrap;
+        
+    }
+}
+
+.table__copy {
+    cursor: pointer;
+
+    &:active {
+        cursor: grabbing;
+    }
+}
+
+@media (max-width: 1023px) {
+    .table__td:nth-child(3) {
+        max-width: 163px;
+    }
+
+    .table__td .copy {        
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.table__row:nth-child(2n) .table__td {
+    background: var(--light-block);
+}
+
+.table__curr {
+    display: inline-block;
+    margin-right: 8px;
+    width: 18px;
+    height: 18px;
+    svg {
+        display: block;
+    }
+}
+
+.table__copy {
+    margin: 0;
+    margin-left: auto;
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+}

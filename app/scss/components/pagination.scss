@@ -1,0 +1,168 @@
+.pagination {
+    display: grid;
+    column-gap: 24px;
+}
+
+.pagination__btn {
+   padding: 0;
+    margin: 0;
+    width: 32px;
+    height: 32px;
+    color: var(--footer-color);
+    background-color: var(--light-block);
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &:nth-child(1) {
+        margin-right: 20px;
+        transform: scale(-1,1);
+    }
+
+    &:nth-child(2) {
+        margin-right: 20px;
+        transform: scale(-1,1);
+    }
+
+    &:nth-last-child(1) {
+        margin-left: 20px;
+    }
+
+    &:active {
+        cursor: grabbing;
+    }
+
+    &:disabled {
+        color: var(--light-color3);
+    }
+}
+
+.pagination__btn--disabled {
+    color: var(--light-color3);
+}
+
+.pagination__first-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination__input {
+    padding-left: 10px;
+    font-size: 14px;
+    line-height: 16px;
+    height: 32px;
+    letter-spacing: 0.015em;
+    border: 1px solid var(--footer-color);
+    box-sizing: border-box;
+    border-radius: 10px;    
+}
+
+.pagination__label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    line-height: 16px;
+    height: 32px;
+}
+
+.pagination__input--change {
+    width: 32px;
+    
+    &:hover,
+    &:focus,
+    &:focus-within {
+        outline: 0;
+    }
+}
+
+.pagination__text {
+    display: block;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.pagination__input--num {
+    width: 71px;
+
+    &:hover,
+    &:focus,
+    &:focus-within {
+        outline: 0;
+    }
+}
+
+.pagination__select {
+    position: relative;
+}
+
+.pagination__wrapper {
+    display: none;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 50%;    
+    flex-direction: column;
+    background: #FFFFFF;
+    border: 1px solid #222837;
+    box-sizing: border-box;
+    box-shadow: 2px 4px 16px rgba(6, 7, 10, 0.15);
+    border-radius: 10px;
+    transform: translateX(-50%);
+}
+
+.pagination__select.opened .pagination__wrapper {
+    display:flex;
+}
+
+.pagination__select.opened svg {
+    transform: rotate(180deg);
+}
+
+.pagination__select-svg {
+    position: absolute;
+    right: 12.25px;
+    top: 9.25px;
+    display: block;
+    width: 6px;
+    height: 12px;
+    transform: rotate(90deg);
+}
+
+.pagination__option {
+    position: relative;
+    display: flex;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        font-weight: 500;
+    }
+
+    &:active {
+        cursor: grabbing;
+    }
+
+    input {
+        position:absolute;
+        top: 0;
+        left: 50%;
+        opacity: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .pagination {
+        position: relative;        
+    }
+
+    .pagination__second-wrap {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}

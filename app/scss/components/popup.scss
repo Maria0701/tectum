@@ -1,0 +1,144 @@
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    max-width: 390px;
+    background: linear-gradient(153.43deg, #FFFFFF 29.75%, #EDEFF4 83.33%);
+    
+    &.opened {
+        display: block;
+    }
+}
+
+.popup__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 32px;
+    padding-right: 32px;
+    height: 100%;
+    text-align: center;
+}
+
+.popup__name {
+    margin-top: 0;
+    margin-bottom: 42px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.005em;
+    color: var(--textColor);
+}
+
+.popup__label {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.popup__input {
+    padding-top: 12px;
+    padding-bottom: 11px;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex-basis: 100%;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    background: var(--light-color2);
+    box-shadow: inset -2px -4px 16px #FFFFFF, inset 2px 4px 8px rgba(202, 206, 220, 0.7);
+    border-radius: 10px;
+    border: 1px solid transparent;
+}
+
+.popup__btn {
+    box-shadow: -2px -4px 13px rgba(255, 255, 255, 0.7), 2px 4px 18px rgba(164, 170, 194, 0.7), -2px -4px 13px #FFFFFF;
+}
+
+.popup__form {
+    margin-bottom: 42px;
+}
+
+.popup__politics {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    a {
+        color: var(--yellow);
+        text-decoration: none;
+        cursor: pointer;
+
+        &:active {
+            cursor: grabbing;
+        }
+    }
+}
+
+.popup__exists {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    a {
+        color: var(--yellow);
+        text-decoration: none;
+        cursor: pointer;
+
+        &:active {
+            cursor: grabbing;
+        }
+    }
+}
+
+.popup__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    color: #B2B8CC;
+
+    svg {
+        display: block;
+    }
+
+}
+
+@media(max-width: 450px) {
+    .popup {
+        position: absolute;
+        height: 100vh;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }    
+}
+
+@media (min-width: 451px) {
+    .popup {
+        width: 390px;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0); 
+        box-sizing: border-box;
+        box-shadow: 0px 5px 27px rgba(6, 7, 10, 0.2);
+        border-radius: 10px;
+    }
+}
+
+.invalid-feedback {
+    position: absolute;
+    top: 100%;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.02em;
+}

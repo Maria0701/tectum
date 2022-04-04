@@ -1,0 +1,28 @@
+.socials {
+    display: grid;
+    grid-auto-flow: column; 
+    column-gap: 16px;
+    justify-content: center;
+}
+
+.socials__link {
+    display: contents;
+    color: var(--light-block);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+
+    &:hover,
+    &:focus {
+        color: var(--yellow);
+    }
+
+    &:active {
+        color: var(--yellow);
+        cursor: grabbing;
+    }
+}
+
+.socials__svg {
+    width: 26px;
+    height: 26px;
+}
